@@ -1,3 +1,20 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(http://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IJsabQn3CiWJQhcyqO-X-wo.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(http://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IJsM3FTMmj2kTPH3yX99Yaw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/*-------------------------*/
 body{
   display: flex;
   flex-direction: column;
@@ -34,7 +51,6 @@ nav ul li a {
   font-weight: 700;
 }
 .nav-bar{
-  
   background-color: #333;
   overflow: hidden;
   position: fixed;
@@ -44,19 +60,14 @@ nav ul li a {
 .nav-bar a {
   font-size: .95em;
   color: #fff;
-  text-transform: uppercase;
-}
-.nav-nav a {
-  font-size: .95em;
-  color: #fff;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 .nav-bar-right a,
 .nav-bar-left a {
-    text-align: center;
-    display: block;
-    padding: 10px 5px;
-    margin: 10px;
+  text-align: center;
+  display: block;
+  padding: 10px 5px;
+  margin: 10px;
   }
 .nav-bar-left a {
   font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
@@ -64,11 +75,9 @@ nav ul li a {
 }
 .nav-bar-right a:hover { 
   color: #fed136;
+  font-size: 110%
 }
 
-nav i #close-btn {
-  display: none;
-}
 /*----------------------------end nav bar-------------------------------*/
 a{
   text-decoration: none;
@@ -91,11 +100,18 @@ ul{
   margin-top: 20px;
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 22px;
-  text-transform: none;
+  /*text-transform: none;*/
   background-color: #fed136;
   font-size: 20px;
   font-weight: 700; 
 }
+.intro-text a:hover{
+color: grey;
+font-size: 150%
+}
+/*.intro-text:hover{
+  color:white;
+}*/
 
 header {
   /*background-image: url("images/bg1.jpg");*/
@@ -107,7 +123,7 @@ header {
 }
 header .container h2{
   margin-bottom: 25px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 50px;
   font-weight: 700;
@@ -116,7 +132,7 @@ header .container h2{
 a{
   padding: 20px 40px;
   color: #fed136;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -130,9 +146,172 @@ a{
   padding: auto;
   color: white;
 }
-/*################################## page2 Skills  ############################*/
+/****************************************Page2 About***************************/
+/*body{
+  margin: 0;
+  box-sizing: border-box;
+}*/
+/*#page2{
+  display: flex;
+  width: 100%;
+  min-height: 75vh;  
+  margin-top: 0px;
+  padding: auto;
+  background: radial-gradient(#0d896a, #08945d);
+  background: radial-gradient(#999999, #F7F7F7);
+  background-color: #F7F7F7;
+}*/
+ #page2 #about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 40px;
+  padding:95px;
+}
+#about p{
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+#about b{
+  font-size: 24px;
+  text-transform: uppercase;
+}
+/*#about b:nth-child(1){
+  color: red;
+}
+#about b:nth-child(2){
+  color: #00BCD4;
+}
+#about b:nth-child(3){
+  color: #FF9800;
+}
+#about b:nth-child(4){
+  color: #32d038;
+}
+#about b:nth-child(5){
+  color: #E91E63;
+}
+#about b:nth-child(5){
+  color: #607D8B;
+}*/
+#about p a{
+  color: #1FCECB;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 99vw;
+  margin-top: -230px;
+/*   background-color: #1fa67a; */
+ background-color: grey; */
 
-#page2{
+}
+.photo img{
+  width: 250px;
+  border-radius: 50%;
+  align-self: center;
+  /*display: none;*/
+
+}
+.info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  animation-duration: 3s;
+}
+.info h1{
+  /*margin-left: auto;*/
+  margin: 0 0 0 400px;
+ /* color:white;*/
+}
+.hobby h1{
+  margin: 0 0 0 40px;
+
+}
+/*#devider{
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #130B08;
+}*/
+#text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 70vw;
+  margin-left: 400px;
+}
+#text span p a{
+  color: #fed136;
+  padding: 2px;
+}
+.hobby{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hobby-wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.hobby-items i.fa{
+  font-size: 32px;
+  color: #fff;
+}
+.hobby-items span{
+  font-size: 10px;
+  margin-top: 9px;
+  padding: 1px;
+  color: #fff;
+
+}
+.hobby-items{
+  display: flex;
+  flex-basis: 100px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  background-color:#fed136;;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 100px;
+}
+@media only screen and (max-width: 800px) {
+  .hobby-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hobby-items{
+    width: 33%;
+    margin: 7px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/****************************End About Page**********************
+
+
+
+
+
+/*################################## page3 Skills  ############################*/
+
+#page3{
   display: flex;
   width: 100%;
   min-height: 75vh;  
@@ -142,7 +321,7 @@ a{
   background: radial-gradient(#999999, #F7F7F7);
   /*background-color: #F7F7F7;*/
 }
-#page2 .container{
+#page3 .container{
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -154,39 +333,39 @@ a{
   font-family: 'Roboto', sans-serif;
   padding-bottom: 50px;
 }
-#page2 .container h1 {
+#page3 .container h1 {
   display: flex;
   align-self: center;
-  /*margin-top: 100px*/;
+  margin:10px 0 20px 0;
   margin-top: -50px
   min-height:100vh;
   color: #fff;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
-#page2 .container .skills li i.fa{
+#page3 .container .skills li i.fa{
   align-self: center;
   font-size: 50px;
   margin-top: 3px;
-  color: #4CAF50;
+  color: #fed136;
 }
-#page2 .container .skills{
+#page3 .container .skills{
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   margin: 0 35px 0 15px;
 }
-#page2 .container .skills ul{
+#page3 .container .skills ul{
   padding-left: 0;
   margin-top: 0;
 }
-#page2 .container .skills ul h2{
+#page3 .container .skills ul h2{
   margin-top: 10px;
 }
-#page2 .container .skills ul [class*=" devicon-"], #page2 .container .skills ul [class^=devicon-] {
+#page3 .container .skills ul [class*=" devicon-"], #page3 .container .skills ul [class^=devicon-] {
   font-size: 50px;
   margin: 5px;
 }
- #page2 .container .skills li {
+ #page3 .container .skills li {
   width: 90%;
   align-self: center;
   display: flex;
@@ -199,14 +378,14 @@ a{
   padding: 5px;
   /*display: none;*/
 }
-#page2 .container .skills li hr {
+#page3 .container .skills li hr {
   width: 75%;
   color: #000;
   border: 1px solid;
 }
 
 /* ====================Projects ==============================*/
-#page3 {
+#page4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,18 +394,16 @@ a{
   margin-top: 0px;
   padding: auto;
   color: white;
-  
-  /*background: radial-gradient(#51a4ee, #14375a);*/
   background-color: #999999;
   padding-top: 9vh;
 }
-#page3 h1 {
+#page4 h1 {
   margin-top: -20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #fff;
 }
-#page3 .all-projects {
+#page4 .all-projects {
   display: flex;
   align-self: center;
       flex-wrap: wrap;
@@ -244,22 +421,20 @@ a{
   display: flex;
   flex-direction: column;
 }
-#page3 .all-projects .project-details p {
+#page4 .all-projects .project-details p {
   display: block;
   font-size: 19px;
   margin-top: 6px;
 }
-#page3 .all-projects .project-details h3 {
+#page4 .all-projects .project-details h3 {
   text-align: center;
   margin: 8px;
 }
-#page3 .all-projects li {
+#page4 .all-projects li {
   flex: 0 29%;
   list-style-type: none;
   align-self: space-around;
   margin: 5px;
-/*  display: none;*/
-  background-color: #00BCD4;
   border: 1px solid black;
   border-radius: 4px;
   border-right: 0;
@@ -268,47 +443,57 @@ a{
   padding: 15px;
   padding-bottom: 5px;
 }
-#page3 .all-projects li a {
+#page4 .all-projects li a {
   text-decoration: none;
 }
-#page3 .all-projects li .languages {
+#page4 .all-projects li .languages {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-#page3 .all-projects li .languages i {
+#page4 .all-projects li .languages i {
   font-size: 38px;
 }
-#page3 .all-projects li a.view-btn {
+#page4 .all-projects li a.view-btn {
   display: inline-block;
   width: 100px;
   height: 20px;
-  background-color: #0db75a;
-  border: 1px solid #108e49;
+  background-color: #fed136;
+  border: 3px solid #999999;
   text-align: center;
   padding: 6px 0 2px 0;
-  border-radius: 10px;
-  color: #fff;
+  border-radius: 8px;
+  color: black;
   align-self: center;
 }
-#page3 .all-projects li a.source-btn {
+#page4 .all-projects li a.view-btn:hover{
+  color:grey;
+  font-size: 20px;
+}
+#page4 .all-projects li a.source-btn {
   display: inline-block;
   width: 100px;
   height: 20px;
-  background-color: #E91E63;
-  border: 1px solid #E91E63;
+  background-color: #fed136;
+  border: 3px solid #999999;
   text-align: center;
   padding: 6px 0 2px 0;
-  border-radius: 10px;
-  color: #fff;
+  border-radius: 8px;
+  /*color: #fff;*/
+  color: black;
+  /*color: #fed136;*/
   align-self: center;
 }
-#page3 .all-projects li img {
+#page4 .all-projects li a.source-btn:hover{
+  color:grey;
+  font-size: 20px;
+}
+#page4 .all-projects li img {
   width: 100%;
   border-radius: 4px;
   border-bottom: 2px solid black;
+  margin-top: 5px;
 }
-
 .button-container{
   display: flex;
   /*align-items:flex-end;*/
@@ -319,7 +504,7 @@ a{
 /* ==================== End Projects ==============================*/
 
 /*====================== Page4 contact ============================*/
-#page4 {
+#page5 {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -339,28 +524,28 @@ a{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
-#page4 .link {
+#page5 .link {
   align-self: center;
   margin: 0 40px;
   cursor: pointer;
   /*display: none;*/
 }
-#page4 .link i {
+#page5 .link i {
   font-size: 60px;
   background-color: #fff;
 }
-#page4 .link .fa-linkedin-square {
+#page5 .link .fa-linkedin-square {
   padding: 20px 26px;
   border-radius: 50%;
   color: #3E92FF;
 }
-#page4 .link .fa-envelope-o {
+#page5 .link .fa-envelope-o {
   padding: 20px;
   border-radius: 50%;
   color: #E91E63;
   font-size: 54px;
 }
-#page4 .link .fa-github {
+#page5 .link .fa-github {
   padding: 20px;
   border-radius: 50%;
   color: #000;
@@ -390,152 +575,40 @@ a{
   display: inline;
 }
 
-
-
-
 /*========================
     Media Queries
 ==========================*/
 
 @media(min-width: 769px){
-
-/*
-  #menu-bar {
-  display: none;
-  display: inline-block;
-  font-size: 38px;
-  color: #fff;
-  position: absolute;
-  top: 14px;
-  right: 5%;
-  width: 40px;
-  padding: 1px;
-  cursor: pointer;
-  text-shadow: 0 0 2px black;
-}*/
-  /*#page2 .skills h2,*/
-  /*#page1,
-  #page2,
-  #page3,
-  #page4,*/
   .nav-bar,
   .nav-bar-right{
     display: flex;   
   }
-  .nav-bar{
+  .nav-bar {
    /* display: flex;*/
     flex-direction:column;
     align-items: center;
   }
 
-
-
-
-
-//
-   /*#menu-bar {
-    display: inline-block;
-    margin-top: 10px;
-    transform: color 0.4s;
-    font-size: 26px;
-  }*/
-  /*#menu-bar:hover{
-    color: orange;
-  }*/
-  //////
-
-
-nav .nav-bar-right li {
-    display: none;
-    margin: 0 5px;
-    width: 15%;
-    text-align: center;
-    min-width: 89px;
-    padding: 3px;
-  }
   .nav-bar-right li a:hover{
     color: none;
   }
-
   .active{
   color: #fff;
   border-bottom: 0;
   } 
-  /*nav i #menu-bar {
-    display: inline-block;
-    margin-top: 10px;
-    transform: color 0.4s;
-    font-size: 26px;
-  }*/
-  /*nav i #menu-bar:hover{
-    color: orange;
-  }*/
-  /*nav #close-btn {
-    position: absolute;
-    right: 5vw;
-    top: 5vh;
-    font-size: 22px;
-    color: #f8f4f5;
-    cursor: pointer;
-  }*/
- /*nav .overlay {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #4c9daf;
-    text-align: center;
-  }
-  nav .overlay #close-btn{
-    display: inline-block;
-  }
-  nav .overlay li {
-    display: block;
-    color: white;
-    margin: 14vh auto;
-    text-align: center;
-  }
-  nav .overlay li a {
-    cursor: pointer;
-    padding: 20px 60px;
-    font-size: 2vh;
-    padding-left: 0;
-  }*/
-
-
-/* 1 ////////////////////////////// */
-
-
   #page2 .container .skills li{
     width: 90%;
     margin:10px 10px 20px -50px;
   }
-
-
-
-
-
-
 }
+
 @media(min-width: 1025px){
-  
-.nav-bar{
-    /*color:white;*/
+  .nav-bar{  
     flex-direction: row;
     justify-content: space-between;  
   }
-
-///
-
-
-
-
-
-
-
-#projects .all-projects li{
+  #projects .all-projects li{
     width: 88%;
     min-width: 713px;
     margin: 10px;
@@ -563,3 +636,6 @@ nav .nav-bar-right li {
   }
 
 }
+
+
+
